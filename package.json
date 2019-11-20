@@ -1,0 +1,64 @@
+{
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . && stylelint \"app/**/*.scss\""
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.19.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-wrap-in-js": "^1.1.1",
+    "case-converter": "^1.0.1",
+    "cookie": "^0.4.0",
+    "dotenv": "^8.2.0",
+    "js-cookie": "^2.2.1",
+    "jwt-decode": "^2.2.0",
+    "next": "^9.1.3",
+    "next-redux-wrapper": "^4.0.1",
+    "node-sass": "^4.13.0",
+    "postcss-easy-import": "^3.0.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.4",
+    "redux-form": "^8.2.6",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^0.88.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-react-app": "^5.0.2",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-flowtype": "^4.4.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.3",
+    "stylelint": "^11.1.1",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^3.1.1",
+    "stylelint-webpack-plugin": "^1.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn eslint"
+    ],
+    "*.jsx": [
+      "yarn eslint"
+    ],
+    "*.scss": [
+      "yarn stylelint \"app/**/*.scss\""
+    ]
+  }
+}
